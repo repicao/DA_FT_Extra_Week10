@@ -8,30 +8,69 @@ You have been hired as a Data Analyst for "Gnod".
 
 "Gnod" is a small company, and its only revenue stream so far are Ads in the site. In the future, they would like to explore partnership options with music apps (such as _Deezer_, _Soundcloud_ or even _Apple Music_ and _Spotify_). However, for that to be possible, they need to expand and improve their recommendations.
 
-That's precisely where you come. They have hired you as a Data Analyst, and they expect you to bring a mix of technical expertise and business mindset to the table.
+That's precisely where you come in. They have hired you as a Data Analyst, and they expect you to bring a mix of technical expertise and business mindset to the table.
 
 Jane, CTO of Gnod, has sent you an email assigning you with your first task.
 
 ### Task(s)
 
-> This is an e-mail Jane - CTO of Gnod - sent over your inbox in the first weeks working there.
+*Subject: Welcome to Gnoosic! Your First Task as a Data Analyst*
 
-_Dear xxxxxxxx,
-We are thrilled to welcome you as a Data Analyst for *Gnoosic*!_
+Dear Ironhack Student,
 
-_As you know, we are trying to come up with ways to enhance our music recommendations. One of the new features we'd like to research is to recommend songs (not only bands). We're also aware of the limitations of our collaborative filtering algorithms, and would like to give users two new possibilities when searching for recommendations:_
+We are thrilled to welcome you as a Data Analyst for Gnoosic!
 
-- _Songs that are popular around the world right now, independently from their tastes._
-- _Songs that are actually similar to the ones they picked from an acoustic point of view._
+Our goal is to redefine how users discover music—not just based on their listening history but by allowing them to explore songs based on sound, mood, and energy.
 
-_Coming up with the perfect song recommender will take us months - no need to stress out too much. In this first week, we want you to explore new data sources for songs. The Internet is full of information and our first step is to acquire it do an initial exploration. Feel free to use APIs or directly scrape the web to collect as much information as possible from popular songs. Eventually, we'll need to collect data from millions of songs, but we can start with a few hundreds or thousands from each source and see if the collected features are useful._
+To do this, we need your help in designing a new music recommendation system that gives users two powerful ways to find songs:
+1. By selecting a type of music they want to listen to (e.g., Rock, High Energy, Calm).
+2. By asking for a currently trending song, no matter the genre.
 
-_Once the data is collected, we want you to create clusters of songs that are similar to each other. The idea is that if a user inputs a song from one group, we'll prioritize giving them recommendations of songs from that same group._
+Your First Mission
+Your job is to:
 
-_On Friday, you will present your work to me and Marek, the CEO and founder. Full disclosure: I need you to be very convincing about this whole song-recommender, as this has been my personal push and the main reason we hired you for!_
+1. Scrape the Most Popular Songs Right Now
+Your first task is to collect data on globally trending songs.
+Look for sources like Billboard Hot 100, Spotify Viral 50, or other global music charts to compile a list of the most popular songs this week.
+You may use APIs or web scraping to gather song names, artists, and any available metadata.
+Why? This will allow us to recommend trending music if a user says, “I want to hear something popular right now.” These songs will act as an additional "cluster" for recommendations.
 
-_Be open minded about this process: we are agile, and that means that we define our products and features on-the-go, while exploring the tools and the data that's available to us. We'd love you to provide your own vision of the product and the next steps to be taken._
+2. Explore the Dataset and Identify Song Features
+You’ll be working with a dataset of songs and their audio features (such as tempo, loudness, danceability).
+Your task is to analyze the data and determine how we can group songs meaningfully.
 
-_Lots of luck and strength for this first week with us!_
+3. Cluster Songs into Groups
+Using unsupervised learning, you will organize songs into 5 to 20 clusters based on their audio characteristics.
+Your goal is to find natural groupings of songs that sound similar.
 
-_-Jane_
+4. Label the Clusters
+Once you’ve identified the clusters, listen to a few songs from each and come up with descriptive labels for them.
+Examples: Rock, Chill Acoustic, High Energy, Dark & Moody.
+These labels will help users select the type of music they want to listen to.
+
+5. Build the First Version of the Recommender
+Once the clusters are ready, we will allow users to input their preferred music type (e.g., Jazz Fusion), and your system will return a song from that category.
+Additionally, if the user asks for a "currently popular song," your system will recommend one from the trending songs list that you scraped earlier.
+
+The Bigger Picture
+This is just the beginning! If we can successfully group and label songs, we could expand our system to:
+- Fine-tune recommendations based on user feedback.
+- Enhance search options, allowing users to discover new music by describing how they feel.
+- Explore additional features, such as analyzing lyrics or integrating external music databases.
+
+Presentation on Friday
+
+On Friday, you’ll present your findings to me and Marek, the CEO & Founder. Be prepared to:
+
+Show how you scraped the trending songs and what sources you used.
+Explain how you decided on the number of clusters and why.
+Show how you labeled the clusters.
+Demonstrate the first version of the recommender in action.
+This project is a personal passion of mine, and I need you to bring your best insights to make it successful. If we can get this right, we have the potential to change the way people discover music!
+
+Welcome aboard, and good luck on your first week!
+
+– Jane
+
+
+

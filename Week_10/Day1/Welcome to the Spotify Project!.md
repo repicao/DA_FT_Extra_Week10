@@ -1,36 +1,55 @@
-# Welcome to the Spotify Project!
+Welcome to the Spotify Project! 🎵
 
-After reading the Gnod Project Introduction, you are now ready to develop the product that Jane, the CTO of Gnod, asked you to create. You will present it on Friday, where it will be live-tested to assess how good your song recommendations are!
+After reading the Gnoosic Project Introduction, you are now ready to develop the new music recommendation system that Jane, the CTO of Gnoosic, asked you to create.
 
----
+This interactive music recommender will be tested live on Friday, where we will assess how well your song recommendations match user preferences! 🚀
 
-## Instructions
+Instructions
 
-### DAY 1:
-**Objective:**
-- Install necessary libraries and create a Spotify developer account (if not done).
-- Create a DataFrame with the top 100 songs and respective artists by scraping the website [Billboard Hot 100](https://www.billboard.com/charts/hot-100/).
-  - The DataFrame should have 2 columns: `song_title`, `artist`.
-- Using the `Spotipy` library, create a DataFrame storing the `audio_features` of at least 1000 songs.
-  - The more diverse your playlist, the better the end result will be!
+DAY 1: Collecting Data 📊
+Objective:
+1️⃣ Scrape trending songs:
 
-### DAY 2:
-**Objective:**
-- Create a Python program that takes a user input, checks if it is present in your scraped DataFrame.
-  - If it is, it recommends a random song from the DataFrame.
-  - If it’s not, it prints: `Sorry, your song is not popular`.
-  - *Important note*: For now, you will not use the DataFrame of audio features you created yesterday.
+Scrape the Billboard Hot 100 (Billboard Charts) to collect the top 100 songs and respective artists.
+Store this in a DataFrame with the columns:
+"song_title" and "artist"
+These songs will form a "Trending" category that users can choose from.
 
-### DAY 3:
-**Objective:**
-- Using one of the Unsupervised Learning Algorithms that we have covered, create a model using the audio features DataFrame you created on Tuesday.
+2️⃣ Gather audio features:
 
-### DAY 4:
-**Objective:**
-- Finalize the project: Your final program should check if a song is present in your scraped `billboard_hot100` DataFrame.
-  - If it is, it should recommend a random song from that DataFrame.
-  - If not, it should recommend a song based on musical similarity.
+Explore the dataset that is provided to you, making sure you understand what each column means. Keep in mind that this knowledge will be precious for the machine learning part!
 
----
+DAY 2: Basic Recommendation System Setup 🤖
+Objective:
+1️⃣ User Song Type Selection (Basic Recommender Prototype)
 
-Good luck!
+Create a program where the user can input a music type rather than a specific song.
+The user can choose from:
+"High Energy", "Chill Vibes", "Rock", "Trending Now", etc.
+For now, if the user selects "Trending Now," return a random popular song from the Billboard Hot 100 DataFrame.
+If they select another type, simply acknowledge their selection (without returning a song yet).
+
+DAY 3: Clustering Songs for Personalized Recommendations 🎧
+Objective:
+1️⃣ Cluster songs based on their musical characteristics
+
+Use unsupervised learning (e.g., K-Means, DBSCAN, Hierarchical Clustering) to group similar songs.
+Identify 5 to 20 natural clusters in your dataset based on audio features.
+Assign a cluster ID to each song in the dataset.
+2️⃣ Label the Clusters (Genre & Mood-Based Categorization)
+
+Explore each cluster and assign a descriptive label (e.g., "Rock", "High Energy", "Chill Vibes").
+These labels will be used so that when a user selects a music type, they get a song from that cluster.
+
+DAY 4: Finalizing the Music Recommender 🔥
+Objective:
+1️⃣ Final Song Recommendation System
+
+The program should now recommend a song based on the user’s chosen music type:
+If the user selects "Trending Now", return a random trending song from the Billboard Hot 100 list.
+If they select another category (e.g., "Chill Vibes", "Rock", "High Energy"), return a random song from the corresponding cluster.
+2️⃣ Live Testing & Presentation
+
+Be ready to demo your system on Friday to Jane and the team.
+Explain your clustering strategy and how you labeled the clusters.
+
